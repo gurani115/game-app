@@ -1,0 +1,41 @@
+header {
+  height: 120px;
+  width: 100vw;
+  background-color: darkgray;
+}
+
+.main {
+  height: calc( 100vh - 120px - 100px );
+  width: 100vw;
+  background-color: lavenderblush;
+}
+
+.games {
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+  font-size: 30px;
+  border-bottom: 1px solid red;
+}
+
+.click {
+  height: 100px;
+  width: 300px;
+  font-size: 20px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  height: 100px;
+  width: 100vw;
+  background-color: lightblue;
+}
+

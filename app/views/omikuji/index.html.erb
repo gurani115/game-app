@@ -1,0 +1,21 @@
+<div class='game-header'>
+  <div class='title'>おみくじ</div>
+  <div class='btn'>
+    <%= link_to(root_path, class:'root-btn') do %>
+      <span>戻る</span>
+    <% end %>
+  </div>
+</div>
+<div id='obtn'>?</div>
+
+<script>
+  window.addEventListener('load', function(){
+    const obtn = document.getElementById('obtn');
+
+    obtn.addEventListener('click', () => {
+      const results = ['大吉!', '大吉?', '中吉', '末吉', '凶', '大凶!', '大凶?'];
+      const n = Math.floor(Math.random() * results.length);
+      obtn.textContent = results[n];
+    });
+  });
+</script>

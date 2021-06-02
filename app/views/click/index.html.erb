@@ -1,0 +1,39 @@
+<div class='game-header'>
+  <div class='title'>クリックゲーム</div>
+  <div class='btn'>
+    <%= link_to(root_path, class:'root-btn') do %>
+      <span>戻る</span>
+    <% end %>
+  </div>
+</div>
+
+<div class='main-box'>
+  <div class='box-title'>当たりを探せ！</div>
+</div>
+
+<script>
+  window.addEventListener('load', function(){
+  const num = 20;
+  const winner = Math.floor(Math.random() * num);
+
+    for (let i = 0; i < num; i++) {
+      const div = document.createElement('div');
+  
+      div.classList.add('box');
+
+      div.addEventListener('click', () => {
+       if (i === winner) {
+         div.textContent = '当たり!';
+         div.classList.add('win');
+       } else {
+         div.textContent = 'はずれ';
+         div.classList.add('lose');
+       }
+      });
+    document.body.appendChild(div);
+    }
+    const div = document.createElement('div');
+    div.classList.add('footer-box');
+    document.body.appendChild(div);
+  });
+</script>
