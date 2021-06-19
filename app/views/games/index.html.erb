@@ -1,9 +1,10 @@
 <header>
+  <div class='main-title'>MyJavaScript</div>
 </header>
 
 <div class='main'>
   <div class='games'>
-    <div class='game'>ゲーム一覧</div>
+    <div class='game'>作成品一覧</div>
   </div>
   <div class='click'>
     <%= link_to(click_path, class:'btn') do %>
@@ -13,6 +14,11 @@
   <div class='click'>
     <%= link_to(omikuji_path, class:'btn') do %>
       <span>おみくじ</span>
+    <% end %>
+  </div>
+  <div class='click'>
+    <%= link_to(bingocard_path, class:'btn') do %>
+      <span>ビンゴカード</span>
     <% end %>
   </div>
 </div>
